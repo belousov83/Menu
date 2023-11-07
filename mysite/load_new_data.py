@@ -46,7 +46,7 @@ def load_data():
         p_item = MenuItem.objects.get(title=item)
 
         for w in weight:
-            timeframe_item = MenuItem.objects.create(title=f"{item}_{w}", slug=f"{item.lower()}_{w}",
+            MenuItem.objects.create(title=f"{item}_{w}", slug=f"{item.lower()}_{w}",
                                                      parent=p_item, menu=main_menu)
 
 if __name__ == "__main__":
