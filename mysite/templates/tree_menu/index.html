@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Start Page {% endblock %}
+
+{% load draw_menu %}
+
+{% block content %}
+
+<h2> Древовидное меню </h2>
+
+    {% if menu %}
+        {% draw_menu 'main_menu' %}
+    {% else %}
+        <p>нет данных!</p>
+    {% endif %}
+
+{% endblock %}
